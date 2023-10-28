@@ -36,16 +36,16 @@ def main():
             'location': '동아대학교',
             'description': 'AI 설계 및 실습 발표 준비',
             'start': {
-                'dateTime': '2023-10-16T15:00:00+09:00',
+                'dateTime': '2023-10-24T15:00:00+09:00',
                 'timeZone': 'Asia/Seoul',
             },
             'end': {
-                'dateTime': '2023-10-16T18:00:00+09:00',
+                'dateTime': '2023-10-24T18:00:00+09:00',
                 'timeZone': 'Asia/Seoul',
             },
-            'recurrence': [
-                'RRULE:FREQ=DAILY;COUNT=1'
-            ],
+            # 'recurrence': [
+            #     'RRULE:FREQ=DAILY;COUNT=1'
+            # ],
             # 'attendees': [
             #     {'email': 'cpprhtn@naver.com'},
             # ],
