@@ -42,20 +42,7 @@ def main():
             'end': {
                 'dateTime': '2023-10-24T18:00:00+09:00',
                 'timeZone': 'Asia/Seoul',
-            },
-            # 'recurrence': [
-            #     'RRULE:FREQ=DAILY;COUNT=1'
-            # ],
-            # 'attendees': [
-            #     {'email': 'cpprhtn@naver.com'},
-            # ],
-            # 'reminders': {
-            #     'useDefault': False,
-            #     'overrides': [
-            #     {'method': 'email', 'minutes': 24 * 60},
-            #     {'method': 'popup', 'minutes': 10},
-            #     ],
-            # },
+            }
         }
 
         event = service.events().insert(calendarId='primary', body=event).execute()

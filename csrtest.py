@@ -2,6 +2,7 @@ import sys
 import requests
 import os
 from dotenv import load_dotenv
+import json
 
 # .env 파일 로드
 load_dotenv()
@@ -21,6 +22,18 @@ headers = {
 response = requests.post(url,  data=data, headers=headers)
 rescode = response.status_code
 if(rescode == 200):
-    print (response.text)
+    # data = json.loads(response.text)
+    data = response.text[9:-2]
+    # print (response.text[9:-2])
+    url = "http://127.0.0.1:5000/api/text"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    response = requests.post(url,  data=data, headers=headers)
+    rescode = response.status_code
+    if(rescode == 200):
+        print (response.text)
+    else:
+        print("Error : " + response.text)
 else:
     print("Error : " + response.text)
